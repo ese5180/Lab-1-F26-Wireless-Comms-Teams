@@ -62,11 +62,11 @@ void lora_receive_cb(const struct device *dev, uint8_t *data, uint16_t size,
 
     memcpy(rx_buf, data, print_size);
     rx_buf[print_size] = '\0';
-    if (Payload == 10){
-        LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
+    
+    LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
             rssi, snr, rx_buf, active_led_idx);
     LOG_HEXDUMP_INF(data, size, "Raw Bytes");
-    }
+    
     
 }
 

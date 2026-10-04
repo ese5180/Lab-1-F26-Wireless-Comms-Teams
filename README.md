@@ -23,13 +23,17 @@ Here is the screenshot of our longest distance:
 
 ### 1.2 Trading Range for Bandwidth
 
+We submitted our send and receive code to github. 
+
+The fastest transmission speed is 11ms. To maximize transmission speed, we increased the LoRa bandwidth to 500 kHz, reduced the spreading factor to SF7, used a coding rate of 4/5, and kept the preamble length at 8 symbols.
+
 ## Part 2 LoRaWAN
 
 ### 2.1
 
 We submitted our code to github.
 
-### 2.21
+### 2.2
 
 Here are the screenshots:
 
