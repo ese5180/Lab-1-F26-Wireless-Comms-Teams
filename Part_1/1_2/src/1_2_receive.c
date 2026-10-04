@@ -62,12 +62,11 @@ void lora_receive_cb(const struct device *dev, uint8_t *data, uint16_t size,
 
     memcpy(rx_buf, data, print_size);
     rx_buf[print_size] = '\0';
-    if (Payload == 10){
-        LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
+
+    LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
             rssi, snr, rx_buf, active_led_idx);
+
     LOG_HEXDUMP_INF(data, size, "Raw Bytes");
-    }
-    
 }
 
 int main(void)
@@ -109,7 +108,7 @@ int main(void)
         return 0;
     }
 
-    LOG_INF("Listening continuously on 433.92 MHz (SF10)...");
+    LOG_INF("Listening continuously on 433.92 MHz (SF7, BW500)...");
 
     /* Start asynchronous reception mode */
     ret = lora_recv_async(lora_dev, lora_receive_cb, NULL);

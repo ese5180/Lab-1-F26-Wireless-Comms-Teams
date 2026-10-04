@@ -90,7 +90,7 @@ int main(void)
 	}
 
 	sleep_ms = MAX(airtime_ms * 30, 10000);
-	LOG_INF("Expected packet airtime: %u ms", lora_airtime(lora_dev, MAX_DATA_LEN));
+	LOG_INF("FCC quiet period: %u ms", sleep_ms);
 
 	while (1) {
 		//Red LED on during transmission 

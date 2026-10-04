@@ -15,6 +15,8 @@
 
 We submitted our send and receive code to github.
 
+**RSSI: -77dBm;  SNR:8 8dB; Longest Distance: 400m**
+
 Here is the screenshot of our longest distance:
 
 ![](./imgs/1_1_screenshot.png)
