@@ -37,6 +37,11 @@ void lora_receive_cb(const struct device *dev, uint8_t *data, uint16_t size,
 {
     ARG_UNUSED(dev);
     ARG_UNUSED(user_data);
+    const char team_id[] = "ese5180t10-";
+
+    if (size != 12 || memcmp(data, team_id, 11) != 0) {
+        return;
+    }
 
     /* Turn OFF current active LED */
     if (gpio_is_ready_dt(&leds[active_led_idx])) {
@@ -57,10 +62,12 @@ void lora_receive_cb(const struct device *dev, uint8_t *data, uint16_t size,
 
     memcpy(rx_buf, data, print_size);
     rx_buf[print_size] = '\0';
-
-    LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
+    if (Payload == 10){
+        LOG_INF("RX RSSI: %d dBm | SNR: %d dB | Payload: %s (Active LED: %d)",
             rssi, snr, rx_buf, active_led_idx);
     LOG_HEXDUMP_INF(data, size, "Raw Bytes");
+    }
+    
 }
 
 int main(void)
@@ -89,9 +96,9 @@ int main(void)
     /* --- Physical Layer Matching with 433.92 MHz TX --- */
     config.frequency = 433920000;      /* 433.92 MHz */
     config.bandwidth = BW_125_KHZ;     /* 125 kHz */
-    config.datarate = SF_10;           /* SF10 */
-    config.preamble_len = 8;
-    config.coding_rate = CR_4_5;
+    config.datarate = SF_11;           /* SF10 */
+    config.preamble_len = 16;
+    config.coding_rate = CR_4_8;
     config.iq_inverted = false;
     config.public_network = false;
     config.tx = false;
