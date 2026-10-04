@@ -19,7 +19,7 @@
 
 LOG_MODULE_REGISTER(lorawan_class_a);
 
-static uint8_t data[] = "Hello, world! I am Mark";
+static uint8_t data[] =  "{\"name\":\"Mark\",\"team\":\"10\",\"board\":\"WL55JC\"}";
 
 static void dl_callback(uint8_t port,
                         uint8_t flags,
