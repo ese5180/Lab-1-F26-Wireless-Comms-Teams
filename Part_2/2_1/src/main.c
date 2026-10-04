@@ -164,6 +164,5 @@ int main(void)
         LOG_INF("Data sent: %s", data);
         k_sleep(DELAY);
     }
-
     return 0;
 }
