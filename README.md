@@ -15,4 +15,21 @@
 
 We submitted our send and receive code to github.
 
-Here is the screenshot of our longest distance
+Here is the screenshot of our longest distance:
+
+![](./imgs/1_1_screenshot.png)
+
+### 1.2 Trading Range for Bandwidth
+
+## Part 2 LoRaWAN
+
+### 2.1
+
+We submitted our code to github.
+
+### 2.21
+
+Here are the screenshots:
+
+![](./imgs/2_2_1.png)
+![](./imgs/2_2_2.png)
