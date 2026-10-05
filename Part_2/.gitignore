@@ -1,3 +1,5 @@
 secrets.h
 **/secrets.h
+CMakeLists.txt
+prj.conf
 build/

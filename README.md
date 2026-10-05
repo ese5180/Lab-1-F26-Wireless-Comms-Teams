@@ -27,6 +27,16 @@ We submitted our send and receive code to github.
 
 The fastest transmission speed is 11ms. To maximize transmission speed, we increased the LoRa bandwidth to 500 kHz, reduced the spreading factor to SF7, used a coding rate of 4/5, and kept the preamble length at 8 symbols.
 
+### 1.3 
+
+This is the screenshot of highest current.
+![](./imgs/2_3_highest.png)
+
+This is the screenshot of lowest current.
+![](./imgs/2_3_lowest.png)
+
+Basically, we just modify config.tx_power. At highest, config.tx_power = 22. At lowest, config.tx_power = -9.
+
 ## Part 2 LoRaWAN
 
 ### 2.1
